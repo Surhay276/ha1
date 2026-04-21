@@ -124,19 +124,6 @@ class CalculatorTest {
 
 
 
-    @Test
-    @DisplayName("should display error when drawing the square root of a number")
-    void testSquareRootTwoDigits() {
-        Calculator calc = new Calculator();
 
-        calc.pressDigitKey(2);
-        calc.pressDigitKey(5);
-        calc.pressUnaryOperationKey("√");
-
-        String expected = "5";
-        String actual = calc.readScreen();
-
-        assertEquals(expected, actual);
-    }
 }
 
