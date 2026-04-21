@@ -135,7 +135,7 @@ class CalculatorTest {
 
         String expected = "5";
         String actual = calc.readScreen();
-
+S
         assertEquals(expected, actual);
     }
 }
