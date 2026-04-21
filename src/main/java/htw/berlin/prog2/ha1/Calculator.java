@@ -79,10 +79,13 @@ public class Calculator {
             case "%" -> Double.parseDouble(screen) / 100;
             case "1/x" -> 1 / Double.parseDouble(screen);
             default -> throw new IllegalArgumentException();
+            //5.0 war bei dem test gekommen als ungültige angabe, wir wollen 5 haben
         };
         screen = Double.toString(result);
         if(screen.equals("NaN")) screen = "Error";
         if(screen.contains(".") && screen.length() > 11) screen = screen.substring(0, 10);
+        if(screen.endsWith(".0")) screen = screen.substring(0,screen.length()-2); //durch diesen code wird das .0 a ende des codes entfernt
+
 
     }
 
